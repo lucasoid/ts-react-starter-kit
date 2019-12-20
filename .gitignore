@@ -1,0 +1,4 @@
+.cache
+.notes
+dist
+node_modules

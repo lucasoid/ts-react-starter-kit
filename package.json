@@ -1,0 +1,25 @@
+{
+    "name": "ts-react-starter-kit",
+    "version": "0.1.0",
+    "repository": "https://github.com/lucasoid/ts-react-starter-kit",
+    "description": "Demo of React 16 and TypeScript",
+    "scripts": {
+        "test": "test",
+        "serve": "parcel src/index.html",
+        "build": "parcel build src/index.ts"
+    },
+    "author": "Ben Lucas",
+    "license": "ISC",
+    "dependencies": {
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0"
+    },
+    "devDependencies": {
+        "husky": "^3.1.0",
+        "parcel": "^1.12.4",
+        "postcss-modules": "^1.4.1",
+        "prettier": "^1.19.1",
+        "pretty-quick": "^2.0.1",
+        "typescript": "^3.7.3"
+    }
+}
