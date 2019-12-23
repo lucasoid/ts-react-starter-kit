@@ -1,8 +1,24 @@
-import React from 'react';
+import * as React from 'react';
+import { NavLink } from 'react-router-dom';
+import { MainMenuItem } from './MainMenuItem';
 import * as styles from './MainMenu.css';
 
-interface MainMenuProps {
-    children?: React.Component[];
-}
-
-export const MainMenu: React.FC<MainMenuProps> = props => <ul className={styles.mainMenu}>{props.children}</ul>;
+export const MainMenu: React.FC<{}> = () => (
+    <ul className={styles.mainMenu}>
+        <MainMenuItem>
+            <NavLink to="/" exact={true} activeClassName={styles.active}>
+                Home
+            </NavLink>
+        </MainMenuItem>
+        <MainMenuItem>
+            <NavLink to="/settings" exact={true} activeClassName={styles.active}>
+                Settings
+            </NavLink>
+        </MainMenuItem>
+        <MainMenuItem>
+            <NavLink to="/help" exact={true} activeClassName={styles.active}>
+                Help
+            </NavLink>
+        </MainMenuItem>
+    </ul>
+);

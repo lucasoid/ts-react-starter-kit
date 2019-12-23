@@ -111,11 +111,27 @@ export const subscribeToLists = (cb: Function) => {
     if (listSubscribers.indexOf(cb) === -1) listSubscribers.push(cb);
 };
 
+export const unsubscribeToLists = (cb: Function) => {
+    let index = listSubscribers.indexOf(cb);
+    if (index !== -1) {
+        listSubscribers.splice(index, 1);
+    }
+};
+
 export const subscribeToListItems = (listId: string, cb: Function) => {
     if (listItemSubscribers[listId] === undefined) {
         listItemSubscribers[listId] = [cb];
     } else {
         listItemSubscribers[listId] = [...listItemSubscribers[listId], cb];
+    }
+};
+
+export const unsubscribeToListItems = (listId: string, cb: Function) => {
+    if (listItemSubscribers[listId] !== undefined) {
+        let index = listItemSubscribers[listId].indexOf(cb);
+        if (index !== -1) {
+            listItemSubscribers[listId].splice(index, 1);
+        }
     }
 };
 

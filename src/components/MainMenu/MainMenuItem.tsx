@@ -1,14 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import * as styles from './MainMenu.css';
 
 interface MainMenuItemProps {
-    label: string;
-    href?: string;
-    children?: React.Component[];
+    children?: any;
 }
 
 export const MainMenuItem: React.FC<MainMenuItemProps> = props => (
-    <li className={styles.mainMenuItem}>
-        <a href={props.href}>{props.label}</a>
-    </li>
+    <li className={styles.mainMenuItem}>{props.children}</li>
 );
