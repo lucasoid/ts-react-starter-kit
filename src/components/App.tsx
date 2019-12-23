@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import { MainMenu, MainMenuItem } from '~components/MainMenu';
 import mainMenu from '~components/MainMenu/data';
+import { ShoppingLists } from '~components/ShoppingLists';
 import * as styles from './App.css';
 
 interface AppProps {
@@ -18,5 +19,6 @@ export const App: React.FC<AppProps> = props => (
                 <MainMenuItem {...item} key={item.label} />
             ))}
         </MainMenu>
+        <ShoppingLists />
     </div>
 );
