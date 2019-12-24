@@ -1,0 +1,32 @@
+.modalWrap {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #efefefaa;
+}
+
+.modalDialog {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 1em;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.modalDialog.small {
+    width: 500px;
+}
+
+.modalDialog.medium {
+    width: 740px;
+}
+
+.modalDialog.large {
+    width: 1080px;
+}
+
+.close {
+    text-align: right;
+}

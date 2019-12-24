@@ -4,6 +4,7 @@ import * as styles from './Button.css';
 interface IButtonProps {
     plaintext?: boolean;
     styles?: React.CSSProperties;
+    title?: string;
     onClick?: Function;
     children?: any;
 }
@@ -15,6 +16,7 @@ export const Button: React.FC<IButtonProps> = props => (
             evt.preventDefault();
             typeof props.onClick === 'function' && props.onClick();
         }}
+        title={props.title}
     >
         {props.children}
     </button>
