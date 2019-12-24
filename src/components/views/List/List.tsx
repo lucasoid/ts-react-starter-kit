@@ -9,6 +9,7 @@ import {
     unsubscribeToListItems,
     IList,
     fetchLists,
+    editListItem,
 } from '~services/shoppingListApi';
 import * as styles from './List.css';
 
@@ -50,6 +51,11 @@ class InertList extends React.Component<IListProps, IListState> {
         unsubscribeToListItems(this.state.list.id, this.subscriber);
     }
 
+    toggle = (item: IListItem) => {
+        item.isActive = !item.isActive;
+        editListItem(item);
+    };
+
     render() {
         return (
             <View>
@@ -61,9 +67,15 @@ class InertList extends React.Component<IListProps, IListState> {
                     <div
                         className={`${styles.listItem} ${item.isActive ? styles.active : styles.inactive}`}
                         key={item.id + index}
+                        onClick={() => this.toggle(item)}
                     >
-                        <div className={styles.category}>{item.category}</div>
+                        <div className={styles.checkbox}>
+                            <Button plaintext={true} styles={{ outline: 'none' }}>
+                                {item.isActive ? '☐' : '☑'}
+                            </Button>
+                        </div>
                         <div className={styles.name}>{item.name}</div>
+                        <div className={styles.category}>{item.category}</div>
                         <div className={styles.quantity}>{item.quantity}</div>
                     </div>
                 ))}

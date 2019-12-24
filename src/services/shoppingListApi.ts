@@ -79,7 +79,7 @@ let sampleListItemData: IListItem[] = [
         isActive: false,
     },
     {
-        id: '1bf8f08a-7ddd-45b9-b401-ca8e13870382',
+        id: '293df6d2-e9d6-4f42-92f6-257543d6dde4',
         listId: '88a1051a-d69b-4655-8ba4-be8d9a44599f',
         category: 'spices',
         name: 'pepper',
@@ -95,7 +95,7 @@ let sampleListItemData: IListItem[] = [
         isActive: true,
     },
     {
-        id: '8253fc7c-14fd-47e7-ad08-4b560cfb34ef',
+        id: '7e1b906c-f6d4-467b-9cea-7072d4cb1d43',
         listId: '0ba0e852-5e9f-44a7-9d6e-d113b4a63173',
         category: 'Lighting',
         name: 'LED floodlight bulbs - 2700k',
@@ -155,7 +155,7 @@ export const fetchLists = async () => {
     return lists;
 };
 
-export const saveList = async (list: IList) => {
+export const createList = async (list: IList) => {
     const newList: IList = await new Promise((resolve, reject) => {
         window.setTimeout(() => {
             resolve(list);
@@ -164,6 +164,18 @@ export const saveList = async (list: IList) => {
     sampleListData.push(newList);
     onUpdateLists(sampleListData);
     return list;
+};
+
+export const editList = async (list: IList) => {
+    const saved: IList = await new Promise((resolve, reject) => {
+        window.setTimeout(() => {
+            resolve(saved);
+        }, LATENCY);
+    });
+    const index = sampleListData.findIndex(_list => _list.id === list.id);
+    sampleListData.splice(index, 1, saved);
+    onUpdateLists(sampleListData);
+    return saved;
 };
 
 export const fetchListItems = async (listId: string) => {
@@ -176,7 +188,7 @@ export const fetchListItems = async (listId: string) => {
     return items;
 };
 
-export const saveListItem = async (item: IListItem) => {
+export const createListItem = async (item: IListItem) => {
     const saved: IListItem = await new Promise((resolve, reject) => {
         window.setTimeout(() => {
             resolve(item);
@@ -185,4 +197,19 @@ export const saveListItem = async (item: IListItem) => {
     sampleListItemData.push(saved);
     onUpdateListItems(item.listId, sampleListItemData);
     return item;
+};
+
+export const editListItem = async (item: IListItem) => {
+    const saved: IListItem = await new Promise((resolve, reject) => {
+        window.setTimeout(() => {
+            resolve(item);
+        }, LATENCY);
+    });
+    const index = sampleListItemData.findIndex(_item => _item.id === item.id);
+    sampleListItemData.splice(index, 1, saved);
+    onUpdateListItems(
+        item.listId,
+        sampleListItemData.filter(_item => _item.listId === item.listId),
+    );
+    return saved;
 };

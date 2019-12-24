@@ -2,6 +2,11 @@
     padding: 0.5em;
     display: flex;
     flex-direction: row;
+    cursor: pointer;
+}
+
+.listItem:hover {
+    background-color: #efefef;
 }
 
 .listItem.inactive {
@@ -12,12 +17,16 @@
     text-decoration: none;
 }
 
-.listItem .category {
-    flex: 0 0 30%;
+.listItem .checkbox {
+    flex: 0 0 5%;
 }
 
 .listItem .name {
-    flex: 0 0 30%;
+    flex: 0 0 45%;
+}
+
+.listItem .category {
+    flex: 0 0 45%;
 }
 
 .listItem .quantity {
