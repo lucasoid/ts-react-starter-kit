@@ -1,6 +1,10 @@
+body {
+    background-color: #efefef;
+}
 .App {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
         'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 14px;
     width: 100%;
     max-width: 1080px;
     margin: 0 auto;
@@ -8,9 +12,20 @@
 }
 
 .header {
-    border-bottom: 1px solid #444;
+    background-color: #fff;
+    padding: 1em;
 }
 
-.title {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 500;
+}
+
+a {
+    color: teal;
+    text-decoration: none;
 }

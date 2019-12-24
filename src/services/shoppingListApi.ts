@@ -5,7 +5,7 @@ export interface IList {
     members?: string[];
 }
 
-interface IListItem {
+export interface IListItem {
     id: string;
     listId: string;
     category: string;
@@ -152,6 +152,7 @@ export const fetchLists = async () => {
         }, LATENCY);
     });
     onUpdateLists(lists);
+    return lists;
 };
 
 export const saveList = async (list: IList) => {
@@ -162,6 +163,7 @@ export const saveList = async (list: IList) => {
     });
     sampleListData.push(newList);
     onUpdateLists(sampleListData);
+    return list;
 };
 
 export const fetchListItems = async (listId: string) => {
@@ -171,6 +173,7 @@ export const fetchListItems = async (listId: string) => {
         }, LATENCY);
     });
     onUpdateListItems(listId, items);
+    return items;
 };
 
 export const saveListItem = async (item: IListItem) => {
@@ -181,4 +184,5 @@ export const saveListItem = async (item: IListItem) => {
     });
     sampleListItemData.push(saved);
     onUpdateListItems(item.listId, sampleListItemData);
+    return item;
 };

@@ -16,8 +16,8 @@ export const MainMenu: React.FC<{}> = () => (
             </NavLink>
         </MainMenuItem>
         <MainMenuItem>
-            <NavLink to="/help" exact={true} activeClassName={styles.active}>
-                Help
+            <NavLink to="/About" exact={true} activeClassName={styles.active}>
+                About
             </NavLink>
         </MainMenuItem>
     </ul>

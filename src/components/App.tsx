@@ -1,7 +1,10 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { MainMenu } from '~components/MainMenu';
-import { ShoppingListMenu } from '~components/views/ShoppingListMenu';
+import { Home } from '~components/views/Home';
+import { Settings } from '~components/views/Settings';
+import { About } from '~components/views/About';
+import { List } from '~components/views/List';
 import * as styles from './App.css';
 
 interface AppProps {
@@ -16,11 +19,10 @@ export const App: React.FC<AppProps> = props => (
             </header>
             <MainMenu />
             <Switch>
-                <Route path="/settings">Settings controlled here.</Route>
-                <Route path="/help">Help provided here.</Route>
-                <Route path="/">
-                    <ShoppingListMenu />
-                </Route>
+                <Route path="/settings" component={Settings} />
+                <Route path="/about" component={About} />
+                <Route path="/lists/:listId" component={List} />
+                <Route path="/" exact={true} component={Home} />
             </Switch>
         </div>
     </Router>

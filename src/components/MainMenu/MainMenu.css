@@ -5,12 +5,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background: #ccc;
+    background: #fff;
+    border-bottom: 1px solid #cecece;
+    border-top: 1px solid #cecece;
 }
 
 .mainMenuItem a {
-    padding: 0.5em;
-    margin: 0 0.5em;
+    padding: 0.5em 1em;
     display: block;
     text-decoration: none;
     color: inherit;
@@ -20,6 +21,8 @@
 .mainMenuItem a.active {
     border-bottom: 2px solid teal;
 }
-.mainMenuItem:nth-child(1) a {
-    margin-left: 0;
+
+.mainMenuitem a:hover {
+    background-color: #dfdfdf;
+    border-bottom: 2px solid #ccc;
 }
