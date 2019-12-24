@@ -2,9 +2,17 @@
     padding: 0.5em 1em;
     box-shadow: none;
     border: none;
-    background-color: #444;
-    color: #fff;
     cursor: pointer;
+}
+
+.primary {
+    background-color: teal;
+    color: #fff;
+}
+
+.secondary {
+    background-color: #cecece;
+    color: #444;
 }
 
 .btnPlaintext {

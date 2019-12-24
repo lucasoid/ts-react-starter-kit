@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link, /*useParams,*/ withRouter } from 'react-router-dom';
 import { View } from '~components/views/View';
-import { Button } from '~components/ui/Button';
+import { Button, ButtonTypes } from '~components/ui/Button';
 import {
     fetchListItems,
     IListItem,
@@ -79,7 +79,9 @@ class InertList extends React.Component<IListProps, IListState> {
                         <div className={styles.quantity}>{item.quantity}</div>
                     </div>
                 ))}
-                <Button styles={{ marginTop: '1em', backgroundColor: 'teal' }}>+ New item</Button>
+                <Button type={ButtonTypes.PRIMARY} styles={{ marginTop: '1em' }}>
+                    + New item
+                </Button>
             </View>
         );
     }

@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { View } from '~components/views/View';
-import { Button } from '~components/ui/Button';
+import { Button, ButtonTypes } from '~components/ui/Button';
 import { Modal, ModalWidth } from '~components/ui/Modal';
-import { fetchLists, IList, subscribeToLists, unsubscribeToLists } from '~services/shoppingListApi';
+import { ListForm } from '~components/forms/List';
+import { fetchLists, IList, subscribeToLists, unsubscribeToLists, createList } from '~services/shoppingListApi';
 import * as styles from './Home.css';
 
 interface IHomeState {
@@ -38,6 +39,11 @@ export class Home extends React.Component<{}, IHomeState> {
         this.setState({ creating: false });
     };
 
+    createList = (item: IList) => {
+        createList(item);
+        this.closeCreateDialog();
+    };
+
     render() {
         return (
             <>
@@ -51,14 +57,14 @@ export class Home extends React.Component<{}, IHomeState> {
                             <aside>Created by {list.owner}</aside>
                         </div>
                     ))}
-                    <Button onClick={this.openCreateDialog} styles={{ marginTop: '1em', backgroundColor: 'teal' }}>
+                    <Button type={ButtonTypes.PRIMARY} onClick={this.openCreateDialog} styles={{ marginTop: '1em' }}>
                         + New list
                     </Button>
                 </View>
                 {/* demonstrates React.Portal. In real life I'd rather use inline editing. */}
                 {this.state.creating && (
                     <Modal width={ModalWidth.MEDIUM} onDismiss={this.closeCreateDialog}>
-                        Create form here.
+                        <ListForm onSubmit={this.createList} onCancel={this.closeCreateDialog} />
                     </Modal>
                 )}
             </>
