@@ -9,7 +9,6 @@ import {
     unsubscribeToListItems,
     IList,
     fetchLists,
-    subscribeToLists,
 } from '~services/shoppingListApi';
 import * as styles from './List.css';
 
@@ -60,7 +59,7 @@ class InertList extends React.Component<IListProps, IListState> {
                 <aside>Members: {this.state.list.members.join(', ')}</aside>
                 {this.state.items.map((item, index) => (
                     <div
-                        className={styles.listItem + item.active ? styles.active : styles.inactive}
+                        className={`${styles.listItem} ${item.isActive ? styles.active : styles.inactive}`}
                         key={item.id + index}
                     >
                         <div className={styles.category}>{item.category}</div>
