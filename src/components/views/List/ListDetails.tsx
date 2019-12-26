@@ -10,6 +10,7 @@ import {
     editListItem,
 } from '~services/shoppingListApi';
 import { E404 } from '~components/errors/ErrorTypes';
+import { ThemeContext, Themes } from '~theme';
 import * as styles from './List.css';
 
 interface IListDetailsProps {
@@ -33,6 +34,8 @@ export class ListDetails extends React.Component<IListDetailsProps, IListDetails
         items: [],
         notFound: false,
     };
+
+    static contextType = ThemeContext;
 
     subscriber = items => {
         this.setState({ items: items });
@@ -65,6 +68,8 @@ export class ListDetails extends React.Component<IListDetailsProps, IListDetails
     render() {
         if (this.state.notFound) throw new E404('List not found');
 
+        let { theme } = this.context;
+
         return (
             <>
                 <h2>{this.state.list.name}</h2>
@@ -72,7 +77,11 @@ export class ListDetails extends React.Component<IListDetailsProps, IListDetails
                 <aside>Members: {this.state.list.members.join(', ')}</aside>
                 {this.state.items.map((item, index) => (
                     <div
-                        className={`${styles.listItem} ${item.isActive ? styles.active : styles.inactive}`}
+                        className={`
+                            ${styles.listItem}
+                            ${item.isActive ? styles.active : styles.inactive}
+                            ${theme === Themes.DARK ? styles.dark : styles.light}
+                        `}
                         key={item.id + index}
                         onClick={() => this.toggle(item)}
                     >

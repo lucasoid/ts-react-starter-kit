@@ -5,8 +5,11 @@
     cursor: pointer;
 }
 
-.listItem:hover {
+.listItem.light:hover {
     background-color: #efefef;
+}
+.listItem.dark:hover {
+    background-color: #888;
 }
 
 .listItem.inactive {

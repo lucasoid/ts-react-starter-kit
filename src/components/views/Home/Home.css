@@ -1,5 +1,12 @@
 .menuItem {
     padding: 0.5em 0;
     margin: 0;
+}
+
+.menuItem.dark {
+    border-bottom: 1px solid #888;
+}
+
+.menuItem.light {
     border-bottom: 1px solid #efefef;
 }

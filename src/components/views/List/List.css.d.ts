@@ -5,3 +5,5 @@ export const category: string;
 export const quantity: string;
 export const active: string;
 export const inactive: string;
+export const dark: string;
+export const light: string;

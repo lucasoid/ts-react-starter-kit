@@ -5,6 +5,7 @@ import { Button, ButtonTypes } from '~components/ui/Button';
 import { Modal, ModalWidth } from '~components/ui/Modal';
 import { ListForm } from '~components/forms/List';
 import { fetchLists, IList, subscribeToLists, unsubscribeToLists, createList } from '~services/shoppingListApi';
+import { ThemeContext, Themes } from '~theme';
 import * as styles from './Home.css';
 
 interface IHomeState {
@@ -17,6 +18,8 @@ export class Home extends React.Component<{}, IHomeState> {
         lists: [],
         creating: false,
     };
+
+    static contextType = ThemeContext;
 
     subscriber = lists => {
         this.setState({ lists: lists });
@@ -45,12 +48,17 @@ export class Home extends React.Component<{}, IHomeState> {
     };
 
     render() {
+        let { theme } = this.context;
+
         return (
             <>
                 <View>
                     <h2>My lists</h2>
                     {this.state.lists.map(list => (
-                        <div className={styles.menuItem} key={list.id}>
+                        <div
+                            className={`${styles.menuItem} ${theme === Themes.DARK ? styles.dark : styles.light}`}
+                            key={list.id}
+                        >
                             <Link to={`/lists/${list.id}`} title={list.name}>
                                 {list.name}
                             </Link>
