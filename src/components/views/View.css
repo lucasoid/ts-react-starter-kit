@@ -1,6 +1,16 @@
 .view {
     margin: 20px 0;
     padding: 1em;
+}
+
+.view.light {
     background-color: #fff;
+    color: #444;
     border: 1px solid #efefef;
+}
+
+.view.dark {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #000;
 }
