@@ -2,7 +2,16 @@
     font-size: 2em;
     padding: 1em;
     text-align: center;
-    background-color: #fff;
     border: 1px solid crimson;
     color: #888;
+}
+
+.errorMessage.light {
+    background-color: #fff;
+    color: #444;
+}
+
+.errorMessage.dark {
+    background-color: #444;
+    color: #fff;
 }
