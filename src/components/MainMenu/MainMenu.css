@@ -5,9 +5,20 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.mainMenu.light {
     background: #fff;
+    color: #444;
     border-bottom: 1px solid #cecece;
     border-top: 1px solid #cecece;
+}
+
+.mainMenu.dark {
+    background: #444;
+    color: #fff;
+    border-bottom: 1px solid #888;
+    border-top: 1px solid #888;
 }
 
 .mainMenuItem a {
@@ -22,7 +33,12 @@
     border-bottom: 2px solid teal;
 }
 
-.mainMenuitem a:hover {
+.mainMenu.light .mainMenuItem a:hover {
     background-color: #dfdfdf;
     border-bottom: 2px solid #ccc;
+}
+
+.mainMenu.dark .mainMenuItem a:hover {
+    background-color: #202020;
+    border-bottom: 2px solid #222;
 }
