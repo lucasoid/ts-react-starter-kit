@@ -1,28 +1,29 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import { View } from '~components/views/View';
 import { Button, ButtonTypes } from '~components/ui/Button';
 import { Modal, ModalWidth } from '~components/ui/Modal';
 import { ListForm } from '~components/forms/List';
+import { List } from './List';
 import { fetchLists, IList, subscribeToLists, unsubscribeToLists, createList } from '~services/shoppingListApi';
-import { ThemeContext, Themes } from '~theme';
-import * as styles from './Home.css';
+import { ThemeContext } from '~theme';
 
 interface IHomeState {
     lists: IList[];
     creating: boolean;
+    listsLoaded: boolean;
 }
 
 export class Home extends React.Component<{}, IHomeState> {
     state = {
         lists: [],
         creating: false,
+        listsLoaded: false,
     };
 
     static contextType = ThemeContext;
 
     subscriber = lists => {
-        this.setState({ lists: lists });
+        this.setState({ lists: lists, listsLoaded: true });
     };
 
     componentDidMount() {
@@ -54,20 +55,26 @@ export class Home extends React.Component<{}, IHomeState> {
             <>
                 <View>
                     <h2>My lists</h2>
-                    {this.state.lists.map(list => (
-                        <div
-                            className={`${styles.menuItem} ${theme === Themes.DARK ? styles.dark : styles.light}`}
-                            key={list.id}
-                        >
-                            <Link to={`/lists/${list.id}`} title={list.name}>
-                                {list.name}
-                            </Link>
-                            <aside>Created by {list.owner}</aside>
-                        </div>
-                    ))}
-                    <Button type={ButtonTypes.PRIMARY} onClick={this.openCreateDialog} styles={{ marginTop: '1em' }}>
-                        + New list
-                    </Button>
+                    {!this.state.listsLoaded ? (
+                        <>
+                            <List key={1} list={null} />
+                            <List key={2} list={null} />
+                            <List key={3} list={null} />
+                        </>
+                    ) : (
+                        <>
+                            {this.state.lists.map(list => (
+                                <List key={list.id} list={list} />
+                            ))}
+                            <Button
+                                type={ButtonTypes.PRIMARY}
+                                onClick={this.openCreateDialog}
+                                styles={{ marginTop: '1em' }}
+                            >
+                                + New list
+                            </Button>
+                        </>
+                    )}
                 </View>
                 {/* demonstrates React.Portal. In real life I'd rather use inline editing. */}
                 {this.state.creating && (

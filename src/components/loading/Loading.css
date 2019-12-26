@@ -1,0 +1,15 @@
+span.loadingText {
+    margin-bottom: 1px;
+    height: 1em;
+    width: 100%;
+    display: inline-block;
+    content: ' ';
+}
+
+span.loadingText.light {
+    background: #dfdfdf;
+}
+
+span.loadingText.dark {
+    background: #888888;
+}

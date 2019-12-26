@@ -1,6 +1,7 @@
 .listItem {
     padding: 0.5em;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     cursor: pointer;
 }
@@ -25,11 +26,11 @@
 }
 
 .listItem .name {
-    flex: 0 0 45%;
+    flex: 0 0 42%;
 }
 
 .listItem .category {
-    flex: 0 0 45%;
+    flex: 0 0 42%;
 }
 
 .listItem .quantity {

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Button, ButtonTypes } from '~components/ui/Button';
+import { Loading } from '~components/Loading';
 import {
     fetchListItems,
     IListItem,
@@ -10,95 +11,68 @@ import {
     editListItem,
 } from '~services/shoppingListApi';
 import { E404 } from '~components/errors/ErrorTypes';
-import { ThemeContext, Themes } from '~theme';
-import * as styles from './List.css';
+import { ListItem } from './ListItem';
 
 interface IListDetailsProps {
     listId: string;
 }
 
-interface IListDetailsState {
-    list: IList;
-    items: IListItem[];
-    notFound: boolean;
-}
+export const ListDetails: React.FC<IListDetailsProps> = props => {
+    let [list, setList] = React.useState({ id: null, name: null, owner: null, members: [] } as IList);
+    let [loading, setLoading] = React.useState(true);
+    let [items, setItems] = React.useState([]);
+    let [notFound, setNotFound] = React.useState(false);
 
-export class ListDetails extends React.Component<IListDetailsProps, IListDetailsState> {
-    state = {
-        list: {
-            id: null,
-            name: null,
-            owner: null,
-            members: [],
-        },
-        items: [],
-        notFound: false,
-    };
+    React.useEffect(() => {
+        this.subscriber = function(items) {
+            setItems(items);
+            setLoading(false);
+        };
+        fetchLists().then(lists => {
+            let list = lists.find(_list => _list.id === props.listId);
+            if (!list) {
+                setNotFound(true);
+            } else {
+                setList(list);
+                subscribeToListItems(props.listId, this.subscriber);
+                fetchListItems(list.id);
+            }
+        });
+        return () => unsubscribeToListItems(props.listId, this.subscriber);
+    }, [props.listId]);
 
-    static contextType = ThemeContext;
-
-    subscriber = items => {
-        this.setState({ items: items });
-    };
-
-    async componentDidMount() {
-        let lists = await fetchLists();
-        let list = lists.find(_list => _list.id === this.props.listId);
-        if (!list) {
-            this.setState({
-                notFound: true,
-            });
-        } else {
-            this.setState({ list }, () => {
-                subscribeToListItems(this.state.list.id, this.subscriber);
-                fetchListItems(this.state.list.id);
-            });
-        }
-    }
-
-    componentWillUnmount() {
-        unsubscribeToListItems(this.state.list.id, this.subscriber);
-    }
-
-    toggle = (item: IListItem) => {
+    function toggle(item: IListItem) {
         item.isActive = !item.isActive;
         editListItem(item);
-    };
-
-    render() {
-        if (this.state.notFound) throw new E404('List not found');
-
-        let { theme } = this.context;
-
-        return (
-            <>
-                <h2>{this.state.list.name}</h2>
-                <aside>Owner: {this.state.list.owner}</aside>
-                <aside>Members: {this.state.list.members.join(', ')}</aside>
-                {this.state.items.map((item, index) => (
-                    <div
-                        className={`
-                            ${styles.listItem}
-                            ${item.isActive ? styles.active : styles.inactive}
-                            ${theme === Themes.DARK ? styles.dark : styles.light}
-                        `}
-                        key={item.id + index}
-                        onClick={() => this.toggle(item)}
-                    >
-                        <div className={styles.checkbox}>
-                            <Button plaintext={true} styles={{ outline: 'none' }}>
-                                {item.isActive ? '☐' : '☑'}
-                            </Button>
-                        </div>
-                        <div className={styles.name}>{item.name}</div>
-                        <div className={styles.category}>{item.category}</div>
-                        <div className={styles.quantity}>{item.quantity}</div>
-                    </div>
-                ))}
-                <Button type={ButtonTypes.PRIMARY} styles={{ marginTop: '1em' }}>
-                    + New item
-                </Button>
-            </>
-        );
     }
-}
+
+    if (notFound) throw new E404('List not found');
+
+    return (
+        <>
+            {loading ? <Loading el={'h2'} width={'25%'} lines={1}></Loading> : <h2>{list.name}</h2>}
+            {loading ? <Loading el={'aside'} width={'25%'} lines={1}></Loading> : <aside>Owner: {list.owner}</aside>}
+            {loading ? (
+                <Loading el={'aside'} width={'25%'} lines={1}></Loading>
+            ) : (
+                <aside>Members: {list.members.join(', ')}</aside>
+            )}
+            {loading ? (
+                <>
+                    <ListItem item={null} key={1} onClick={() => {}} />
+                    <ListItem item={null} key={2} onClick={() => {}} />
+                    <ListItem item={null} key={3} onClick={() => {}} />
+                </>
+            ) : (
+                <>
+                    {items.map((item, index) => (
+                        <ListItem item={item} key={item.id} onClick={toggle} />
+                    ))}
+                    <Button type={ButtonTypes.PRIMARY} styles={{ marginTop: '1em' }}>
+                        + New item
+                    </Button>
+                </>
+            )}
+        </>
+    );
+};
