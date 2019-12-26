@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { Button } from '~components/ui/Button';
 import { modalRootId } from '~components/ui/Modal';
 import * as styles from './Modal.css';
+import { Themes, ThemeContext } from '~theme';
 
 export enum ModalWidth {
     SMALL,
@@ -17,6 +18,8 @@ interface IModalProps {
 }
 
 export const Modal: React.FC<IModalProps> = props => {
+    let { theme } = React.useContext(ThemeContext);
+
     let el = document.createElement('div');
 
     React.useEffect(() => {
@@ -35,7 +38,7 @@ export const Modal: React.FC<IModalProps> = props => {
     });
 
     return ReactDOM.createPortal(
-        <div className={styles.modalWrap}>
+        <div className={`${styles.modalWrap} ${theme === Themes.DARK ? styles.dark : styles.light}`}>
             <div
                 role={'dialog'}
                 className={`${styles.modalDialog} ${

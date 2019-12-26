@@ -4,15 +4,29 @@
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.modalWrap.light {
     background: #efefefaa;
+}
+
+.modalWrap.dark {
+    background: #444444aa;
 }
 
 .modalDialog {
     max-width: 100%;
     margin: 40px auto;
     padding: 1em;
-    background: #fff;
     box-sizing: border-box;
+}
+
+.modalWrap.light .modalDialog {
+    background: #fff;
+}
+
+.modalWrap.dark .modalDialog {
+    background: #888;
 }
 
 .modalDialog.small {
