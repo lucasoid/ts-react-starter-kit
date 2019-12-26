@@ -5,6 +5,7 @@ import { Home } from '~components/views/Home';
 import { Settings } from '~components/views/Settings';
 import { About } from '~components/views/About';
 import { List } from '~components/views/List';
+import { ErrorBoundary } from '~components/errors/ErrorBoundary';
 import * as styles from './App.css';
 
 interface AppProps {
@@ -17,13 +18,17 @@ export const App: React.FC<AppProps> = props => (
             <header className={styles.header}>
                 <h1 className={styles.title}>{props.title}</h1>
             </header>
-            <MainMenu />
-            <Switch>
-                <Route path="/settings" component={Settings} />
-                <Route path="/about" component={About} />
-                <Route path="/lists/:listId" component={List} />
-                <Route path="/" exact={true} component={Home} />
-            </Switch>
+            <ErrorBoundary>
+                <MainMenu />
+            </ErrorBoundary>
+            <ErrorBoundary>
+                <Switch>
+                    <Route path="/settings" component={Settings} />
+                    <Route path="/about" component={About} />
+                    <Route path="/lists/:listId" component={List} />
+                    <Route path="/" exact={true} component={Home} />
+                </Switch>
+            </ErrorBoundary>
         </div>
     </Router>
 );
