@@ -195,7 +195,10 @@ export const createListItem = async (item: IListItem) => {
         }, LATENCY);
     });
     sampleListItemData.push(saved);
-    onUpdateListItems(item.listId, sampleListItemData);
+    onUpdateListItems(
+        item.listId,
+        sampleListItemData.filter(_item => _item.listId === item.listId),
+    );
     return item;
 };
 

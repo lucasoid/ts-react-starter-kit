@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as styles from '~components/forms/Form.css';
 
 interface ITextFieldProps {
-    value: string;
+    value: string | number;
     label: string;
     onChange: Function;
     disabled?: boolean;
