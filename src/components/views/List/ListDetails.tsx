@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Button, ButtonTypes } from '~components/ui/Button';
-import { Loading } from '~components/Loading';
+import { Loading, Await } from '~components/Loading';
 import {
     fetchListItems,
     IListItem,
@@ -49,30 +49,28 @@ export const ListDetails: React.FC<IListDetailsProps> = props => {
     if (notFound) throw new E404('List not found');
 
     return (
-        <>
-            {loading ? <Loading el={'h2'} width={'25%'} lines={1}></Loading> : <h2>{list.name}</h2>}
-            {loading ? <Loading el={'aside'} width={'25%'} lines={1}></Loading> : <aside>Owner: {list.owner}</aside>}
-            {loading ? (
-                <Loading el={'aside'} width={'25%'} lines={1}></Loading>
-            ) : (
-                <aside>Members: {list.members.join(', ')}</aside>
-            )}
-            {loading ? (
+        <Await
+            loaded={!loading}
+            renderFallback={() => (
                 <>
+                    <Loading el={'h2'} width={'25%'} lines={1}></Loading>
+                    <Loading el={'aside'} width={'25%'} lines={1}></Loading>
+                    <Loading el={'aside'} width={'25%'} lines={1}></Loading>
                     <ListItem item={null} key={1} onClick={() => {}} />
                     <ListItem item={null} key={2} onClick={() => {}} />
                     <ListItem item={null} key={3} onClick={() => {}} />
                 </>
-            ) : (
-                <>
-                    {items.map((item, index) => (
-                        <ListItem item={item} key={item.id} onClick={toggle} />
-                    ))}
-                    <Button type={ButtonTypes.PRIMARY} styles={{ marginTop: '1em' }}>
-                        + New item
-                    </Button>
-                </>
             )}
-        </>
+        >
+            <h2>{list.name}</h2>
+            <aside>Owner: {list.owner}</aside>
+            <aside>Members: {list.members.join(', ')}</aside>
+            {items.map((item, index) => (
+                <ListItem item={item} key={item.id} onClick={toggle} />
+            ))}
+            <Button type={ButtonTypes.PRIMARY} styles={{ marginTop: '1em' }}>
+                + New item
+            </Button>
+        </Await>
     );
 };

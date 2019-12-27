@@ -6,6 +6,7 @@ import { ListForm } from '~components/forms/List';
 import { List } from './List';
 import { fetchLists, IList, subscribeToLists, unsubscribeToLists, createList } from '~services/shoppingListApi';
 import { ThemeContext } from '~theme';
+import { Await } from '~components/loading';
 
 interface IHomeState {
     lists: IList[];
@@ -55,26 +56,27 @@ export class Home extends React.Component<{}, IHomeState> {
             <>
                 <View>
                     <h2>My lists</h2>
-                    {!this.state.listsLoaded ? (
-                        <>
-                            <List key={1} list={null} />
-                            <List key={2} list={null} />
-                            <List key={3} list={null} />
-                        </>
-                    ) : (
-                        <>
-                            {this.state.lists.map(list => (
-                                <List key={list.id} list={list} />
-                            ))}
-                            <Button
-                                type={ButtonTypes.PRIMARY}
-                                onClick={this.openCreateDialog}
-                                styles={{ marginTop: '1em' }}
-                            >
-                                + New list
-                            </Button>
-                        </>
-                    )}
+                    <Await
+                        loaded={this.state.listsLoaded}
+                        renderFallback={() => (
+                            <>
+                                <List key={1} list={null} />
+                                <List key={2} list={null} />
+                                <List key={3} list={null} />
+                            </>
+                        )}
+                    >
+                        {this.state.lists.map(list => (
+                            <List key={list.id} list={list} />
+                        ))}
+                        <Button
+                            type={ButtonTypes.PRIMARY}
+                            onClick={this.openCreateDialog}
+                            styles={{ marginTop: '1em' }}
+                        >
+                            + New list
+                        </Button>
+                    </Await>
                 </View>
                 {/* demonstrates React.Portal. In real life I'd rather use inline editing. */}
                 {this.state.creating && (
