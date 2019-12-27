@@ -5,7 +5,6 @@ import { Modal, ModalWidth } from '~components/ui/Modal';
 import { ListForm } from '~components/forms/List';
 import { List } from './List';
 import { fetchLists, IList, subscribeToLists, unsubscribeToLists, createList } from '~services/shoppingListApi';
-import { ThemeContext } from '~theme';
 import { Await } from '~components/loading';
 
 interface IHomeState {
@@ -20,8 +19,6 @@ export class Home extends React.Component<{}, IHomeState> {
         creating: false,
         listsLoaded: false,
     };
-
-    static contextType = ThemeContext;
 
     subscriber = lists => {
         this.setState({ lists: lists, listsLoaded: true });
@@ -45,13 +42,13 @@ export class Home extends React.Component<{}, IHomeState> {
     };
 
     createList = (item: IList) => {
+        // update the API, which will trigger the subscriber when it completes
         createList(item);
-        this.closeCreateDialog();
+        // update state optimistically while we wait
+        this.setState({ creating: false, lists: this.state.lists.concat(item) });
     };
 
     render() {
-        let { theme } = this.context;
-
         return (
             <>
                 <View>

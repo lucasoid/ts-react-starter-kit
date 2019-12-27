@@ -43,7 +43,16 @@ export const ListDetails: React.FC<IListDetailsProps> = props => {
 
     function toggle(item: IListItem) {
         item.isActive = !item.isActive;
+        // update the API, which will trigger the subscriber when it completes
         editListItem(item);
+        // update state optimistically while we wait
+        let _items = [...items];
+        _items.splice(
+            items.findIndex(_item => _item.id === item.id),
+            1,
+            item,
+        );
+        setItems(_items);
     }
 
     if (notFound) throw new E404('List not found');

@@ -40,7 +40,7 @@ export const ListItem: React.FC<IListItemProps> = props => {
                 ${item.isActive ? styles.active : styles.inactive}
                 ${theme === Themes.DARK ? styles.dark : styles.light}
             `}
-            onClick={() => this.toggle(item)}
+            onClick={() => props.onClick(item)}
         >
             <div className={styles.checkbox}>
                 <Button plaintext={true} styles={{ outline: 'none' }}>
