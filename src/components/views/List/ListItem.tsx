@@ -14,10 +14,7 @@ export const ListItem: React.FC<IListItemProps> = props => {
     let { theme } = React.useContext(ThemeContext);
 
     return !item ? (
-        <div
-            className={`${styles.listItem} ${styles.active} ${theme === Themes.DARK ? styles.dark : styles.light}`}
-            onClick={() => props.onClick(item)}
-        >
+        <div className={`${styles.listItem} ${styles.active} ${theme === Themes.DARK ? styles.dark : styles.light}`}>
             <div className={styles.checkbox}>
                 <Button plaintext={true} styles={{ outline: 'none' }}>
                     ☐

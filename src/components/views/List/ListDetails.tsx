@@ -27,7 +27,7 @@ export const ListDetails: React.FC<IListDetailsProps> = props => {
     let [notFound, setNotFound] = React.useState(false);
     let [showCreateDialog, setShowCreateDialog] = React.useState(false);
     React.useEffect(() => {
-        this.subscriber = function(items) {
+        const subscriber = function(items) {
             setItems(items);
             setLoading(false);
         };
@@ -37,11 +37,11 @@ export const ListDetails: React.FC<IListDetailsProps> = props => {
                 setNotFound(true);
             } else {
                 setList(list);
-                subscribeToListItems(props.listId, this.subscriber);
+                subscribeToListItems(props.listId, subscriber);
                 fetchListItems(list.id);
             }
         });
-        return () => unsubscribeToListItems(props.listId, this.subscriber);
+        return () => unsubscribeToListItems(props.listId, subscriber);
     }, [props.listId]);
 
     function toggle(item: IListItem) {

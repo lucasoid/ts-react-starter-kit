@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Await displays a fallback UI while in a loading state 1`] = `"My fallback"`;
+
+exports[`Await displays the complete UI when in a loaded state 1`] = `"My content"`;

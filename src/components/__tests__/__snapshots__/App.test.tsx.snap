@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders the app 1`] = `
+<BrowserRouter>
+  <Theme>
+    <div
+      className="App"
+    >
+      <Header
+        title="Welcome"
+      />
+      <ErrorBoundary>
+        <Switch>
+          <Route
+            component={[Function]}
+            path="/settings"
+          />
+          <Route
+            component={[Function]}
+            path="/about"
+          />
+          <Route
+            component={[Function]}
+            path="/lists/:listId"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/"
+          />
+        </Switch>
+      </ErrorBoundary>
+    </div>
+  </Theme>
+</BrowserRouter>
+`;

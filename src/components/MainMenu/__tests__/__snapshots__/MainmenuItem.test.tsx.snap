@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainMenuItem displays a main menu item 1`] = `
+<li
+  className="mainMenuItem"
+>
+  <a
+    href="/faq"
+  >
+    FAQ
+  </a>
+</li>
+`;

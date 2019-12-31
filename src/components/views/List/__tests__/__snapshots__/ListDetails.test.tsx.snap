@@ -1,0 +1,1151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListDetails allows for creating items 1`] = `
+<ListDetails
+  listId="1"
+>
+  <Await
+    loaded={true}
+    renderFallback={[Function]}
+  >
+    <h2>
+      My Cool List
+    </h2>
+    <aside>
+      Owner: 
+      me@domain.com
+    </aside>
+    <aside>
+      Members: 
+    </aside>
+    <ListItem
+      item={
+        Object {
+          "category": "",
+          "id": "new",
+          "isActive": true,
+          "listId": "1",
+          "name": "new item",
+          "quantity": 100,
+        }
+      }
+      key="new"
+      onClick={[Function]}
+    >
+      <div
+        className="
+                listItem
+                active
+                light
+            "
+        onClick={[Function]}
+      >
+        <div
+          className="checkbox"
+        >
+          <Button
+            plaintext={true}
+            styles={
+              Object {
+                "outline": "none",
+              }
+            }
+          >
+            <button
+              className="btnPlaintext secondary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                }
+              }
+            >
+              ☐
+            </button>
+          </Button>
+        </div>
+        <div
+          className="name"
+        >
+          new item
+        </div>
+        <div
+          className="category"
+        />
+        <div
+          className="quantity"
+        >
+          100
+        </div>
+      </div>
+    </ListItem>
+    <Button
+      onClick={[Function]}
+      styles={
+        Object {
+          "marginTop": "1em",
+        }
+      }
+      type={0}
+    >
+      <button
+        className="btn primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": "1em",
+          }
+        }
+      >
+        + New item
+      </button>
+    </Button>
+  </Await>
+</ListDetails>
+`;
+
+exports[`ListDetails allows for dismissing the create form 1`] = `
+<ListDetails
+  listId="1"
+>
+  <Await
+    loaded={true}
+    renderFallback={[Function]}
+  >
+    <h2>
+      My Cool List
+    </h2>
+    <aside>
+      Owner: 
+      me@domain.com
+    </aside>
+    <aside>
+      Members: 
+    </aside>
+    <Button
+      onClick={[Function]}
+      styles={
+        Object {
+          "marginTop": "1em",
+        }
+      }
+      type={0}
+    >
+      <button
+        className="btn primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": "1em",
+          }
+        }
+      >
+        + New item
+      </button>
+    </Button>
+  </Await>
+</ListDetails>
+`;
+
+exports[`ListDetails allows for opening and closing the create dialog 1`] = `
+<ListDetails
+  listId="1"
+>
+  <Await
+    loaded={true}
+    renderFallback={[Function]}
+  >
+    <h2>
+      My Cool List
+    </h2>
+    <aside>
+      Owner: 
+      me@domain.com
+    </aside>
+    <aside>
+      Members: 
+    </aside>
+    <Button
+      onClick={[Function]}
+      styles={
+        Object {
+          "marginTop": "1em",
+        }
+      }
+      type={0}
+    >
+      <button
+        className="btn primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": "1em",
+          }
+        }
+      >
+        + New item
+      </button>
+    </Button>
+    <Modal
+      onDismiss={[Function]}
+      width="MEDIUM"
+    >
+      <div>
+        <button
+          onClick={[Function]}
+          title="close"
+        >
+          X
+        </button>
+        <ListItemForm
+          onCancel={[Function]}
+          onSubmit={[Function]}
+        >
+          <form>
+            <button
+              onClick={[Function]}
+              title="submit"
+            >
+              Submit
+            </button>
+            <button
+              onClick={[Function]}
+              title="cancel"
+            >
+              Cancel
+            </button>
+          </form>
+        </ListItemForm>
+      </div>
+    </Modal>
+  </Await>
+</ListDetails>
+`;
+
+exports[`ListDetails allows for opening and closing the create dialog 2`] = `
+<ListDetails
+  listId="1"
+>
+  <Await
+    loaded={true}
+    renderFallback={[Function]}
+  >
+    <h2>
+      My Cool List
+    </h2>
+    <aside>
+      Owner: 
+      me@domain.com
+    </aside>
+    <aside>
+      Members: 
+    </aside>
+    <Button
+      onClick={[Function]}
+      styles={
+        Object {
+          "marginTop": "1em",
+        }
+      }
+      type={0}
+    >
+      <button
+        className="btn primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": "1em",
+          }
+        }
+      >
+        + New item
+      </button>
+    </Button>
+  </Await>
+</ListDetails>
+`;
+
+exports[`ListDetails allows for toggling items between active and inactive 1`] = `
+<ListDetails
+  listId="1"
+>
+  <Await
+    loaded={true}
+    renderFallback={[Function]}
+  >
+    <h2>
+      My Cool List
+    </h2>
+    <aside>
+      Owner: 
+      me@domain.com
+    </aside>
+    <aside>
+      Members: 
+    </aside>
+    <ListItem
+      item={
+        Object {
+          "category": "dairy",
+          "id": "1",
+          "isActive": false,
+          "listId": "1",
+          "name": "Eggs - dozen",
+          "quantity": 1,
+        }
+      }
+      key="1"
+      onClick={[Function]}
+    >
+      <div
+        className="
+                listItem
+                inactive
+                light
+            "
+        onClick={[Function]}
+      >
+        <div
+          className="checkbox"
+        >
+          <Button
+            plaintext={true}
+            styles={
+              Object {
+                "outline": "none",
+              }
+            }
+          >
+            <button
+              className="btnPlaintext secondary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                }
+              }
+            >
+              ☑
+            </button>
+          </Button>
+        </div>
+        <div
+          className="name"
+        >
+          Eggs - dozen
+        </div>
+        <div
+          className="category"
+        >
+          dairy
+        </div>
+        <div
+          className="quantity"
+        >
+          1
+        </div>
+      </div>
+    </ListItem>
+    <ListItem
+      item={
+        Object {
+          "category": "dairy",
+          "id": "2",
+          "isActive": false,
+          "listId": "1",
+          "name": "Milk - gallon",
+          "quantity": 3,
+        }
+      }
+      key="2"
+      onClick={[Function]}
+    >
+      <div
+        className="
+                listItem
+                inactive
+                light
+            "
+        onClick={[Function]}
+      >
+        <div
+          className="checkbox"
+        >
+          <Button
+            plaintext={true}
+            styles={
+              Object {
+                "outline": "none",
+              }
+            }
+          >
+            <button
+              className="btnPlaintext secondary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                }
+              }
+            >
+              ☑
+            </button>
+          </Button>
+        </div>
+        <div
+          className="name"
+        >
+          Milk - gallon
+        </div>
+        <div
+          className="category"
+        >
+          dairy
+        </div>
+        <div
+          className="quantity"
+        >
+          3
+        </div>
+      </div>
+    </ListItem>
+    <Button
+      onClick={[Function]}
+      styles={
+        Object {
+          "marginTop": "1em",
+        }
+      }
+      type={0}
+    >
+      <button
+        className="btn primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": "1em",
+          }
+        }
+      >
+        + New item
+      </button>
+    </Button>
+  </Await>
+</ListDetails>
+`;
+
+exports[`ListDetails allows for toggling items between active and inactive 2`] = `
+<ListDetails
+  listId="1"
+>
+  <Await
+    loaded={true}
+    renderFallback={[Function]}
+  >
+    <h2>
+      My Cool List
+    </h2>
+    <aside>
+      Owner: 
+      me@domain.com
+    </aside>
+    <aside>
+      Members: 
+    </aside>
+    <ListItem
+      item={
+        Object {
+          "category": "dairy",
+          "id": "1",
+          "isActive": true,
+          "listId": "1",
+          "name": "Eggs - dozen",
+          "quantity": 1,
+        }
+      }
+      key="1"
+      onClick={[Function]}
+    >
+      <div
+        className="
+                listItem
+                active
+                light
+            "
+        onClick={[Function]}
+      >
+        <div
+          className="checkbox"
+        >
+          <Button
+            plaintext={true}
+            styles={
+              Object {
+                "outline": "none",
+              }
+            }
+          >
+            <button
+              className="btnPlaintext secondary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                }
+              }
+            >
+              ☐
+            </button>
+          </Button>
+        </div>
+        <div
+          className="name"
+        >
+          Eggs - dozen
+        </div>
+        <div
+          className="category"
+        >
+          dairy
+        </div>
+        <div
+          className="quantity"
+        >
+          1
+        </div>
+      </div>
+    </ListItem>
+    <ListItem
+      item={
+        Object {
+          "category": "dairy",
+          "id": "2",
+          "isActive": false,
+          "listId": "1",
+          "name": "Milk - gallon",
+          "quantity": 3,
+        }
+      }
+      key="2"
+      onClick={[Function]}
+    >
+      <div
+        className="
+                listItem
+                inactive
+                light
+            "
+        onClick={[Function]}
+      >
+        <div
+          className="checkbox"
+        >
+          <Button
+            plaintext={true}
+            styles={
+              Object {
+                "outline": "none",
+              }
+            }
+          >
+            <button
+              className="btnPlaintext secondary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                }
+              }
+            >
+              ☑
+            </button>
+          </Button>
+        </div>
+        <div
+          className="name"
+        >
+          Milk - gallon
+        </div>
+        <div
+          className="category"
+        >
+          dairy
+        </div>
+        <div
+          className="quantity"
+        >
+          3
+        </div>
+      </div>
+    </ListItem>
+    <Button
+      onClick={[Function]}
+      styles={
+        Object {
+          "marginTop": "1em",
+        }
+      }
+      type={0}
+    >
+      <button
+        className="btn primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": "1em",
+          }
+        }
+      >
+        + New item
+      </button>
+    </Button>
+  </Await>
+</ListDetails>
+`;
+
+exports[`ListDetails shows a list details view once data is loaded 1`] = `
+<ListDetails
+  listId="1"
+>
+  <Await
+    loaded={true}
+    renderFallback={[Function]}
+  >
+    <h2>
+      My Cool List
+    </h2>
+    <aside>
+      Owner: 
+      me@domain.com
+    </aside>
+    <aside>
+      Members: 
+    </aside>
+    <ListItem
+      item={
+        Object {
+          "category": "dairy",
+          "id": "1",
+          "isActive": true,
+          "listId": "1",
+          "name": "Eggs - dozen",
+          "quantity": 1,
+        }
+      }
+      key="1"
+      onClick={[Function]}
+    >
+      <div
+        className="
+                listItem
+                active
+                light
+            "
+        onClick={[Function]}
+      >
+        <div
+          className="checkbox"
+        >
+          <Button
+            plaintext={true}
+            styles={
+              Object {
+                "outline": "none",
+              }
+            }
+          >
+            <button
+              className="btnPlaintext secondary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                }
+              }
+            >
+              ☐
+            </button>
+          </Button>
+        </div>
+        <div
+          className="name"
+        >
+          Eggs - dozen
+        </div>
+        <div
+          className="category"
+        >
+          dairy
+        </div>
+        <div
+          className="quantity"
+        >
+          1
+        </div>
+      </div>
+    </ListItem>
+    <ListItem
+      item={
+        Object {
+          "category": "dairy",
+          "id": "2",
+          "isActive": false,
+          "listId": "1",
+          "name": "Milk - gallon",
+          "quantity": 3,
+        }
+      }
+      key="2"
+      onClick={[Function]}
+    >
+      <div
+        className="
+                listItem
+                inactive
+                light
+            "
+        onClick={[Function]}
+      >
+        <div
+          className="checkbox"
+        >
+          <Button
+            plaintext={true}
+            styles={
+              Object {
+                "outline": "none",
+              }
+            }
+          >
+            <button
+              className="btnPlaintext secondary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                }
+              }
+            >
+              ☑
+            </button>
+          </Button>
+        </div>
+        <div
+          className="name"
+        >
+          Milk - gallon
+        </div>
+        <div
+          className="category"
+        >
+          dairy
+        </div>
+        <div
+          className="quantity"
+        >
+          3
+        </div>
+      </div>
+    </ListItem>
+    <Button
+      onClick={[Function]}
+      styles={
+        Object {
+          "marginTop": "1em",
+        }
+      }
+      type={0}
+    >
+      <button
+        className="btn primary"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginTop": "1em",
+          }
+        }
+      >
+        + New item
+      </button>
+    </Button>
+  </Await>
+</ListDetails>
+`;
+
+exports[`ListDetails shows a loading UI before data is loaded 1`] = `
+<ListDetails
+  listId="1"
+>
+  <Await
+    loaded={false}
+    renderFallback={[Function]}
+  >
+    <Loading
+      el="h2"
+      lines={1}
+      width="25%"
+    >
+      <h2
+        key="0"
+        style={
+          Object {
+            "width": "25%",
+          }
+        }
+      >
+        <span
+          className="loadingText light"
+        />
+      </h2>
+    </Loading>
+    <Loading
+      el="aside"
+      lines={1}
+      width="25%"
+    >
+      <aside
+        key="0"
+        style={
+          Object {
+            "width": "25%",
+          }
+        }
+      >
+        <span
+          className="loadingText light"
+        />
+      </aside>
+    </Loading>
+    <Loading
+      el="aside"
+      lines={1}
+      width="25%"
+    >
+      <aside
+        key="0"
+        style={
+          Object {
+            "width": "25%",
+          }
+        }
+      >
+        <span
+          className="loadingText light"
+        />
+      </aside>
+    </Loading>
+    <ListItem
+      item={null}
+      key="1"
+      onClick={[Function]}
+    >
+      <div
+        className="listItem active light"
+      >
+        <div
+          className="checkbox"
+        >
+          <Button
+            plaintext={true}
+            styles={
+              Object {
+                "outline": "none",
+              }
+            }
+          >
+            <button
+              className="btnPlaintext secondary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                }
+              }
+            >
+              ☐
+            </button>
+          </Button>
+        </div>
+        <div
+          className="name"
+        >
+          <Loading
+            el="span"
+            lines={1}
+            width="100%"
+          >
+            <span
+              key="0"
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <span
+                className="loadingText light"
+              />
+            </span>
+          </Loading>
+        </div>
+        <div
+          className="category"
+        >
+          <Loading
+            el="span"
+            lines={1}
+            width="100%"
+          >
+            <span
+              key="0"
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <span
+                className="loadingText light"
+              />
+            </span>
+          </Loading>
+        </div>
+        <div
+          className="quantity"
+        >
+          <Loading
+            el="span"
+            lines={1}
+            width="100%"
+          >
+            <span
+              key="0"
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <span
+                className="loadingText light"
+              />
+            </span>
+          </Loading>
+        </div>
+      </div>
+    </ListItem>
+    <ListItem
+      item={null}
+      key="2"
+      onClick={[Function]}
+    >
+      <div
+        className="listItem active light"
+      >
+        <div
+          className="checkbox"
+        >
+          <Button
+            plaintext={true}
+            styles={
+              Object {
+                "outline": "none",
+              }
+            }
+          >
+            <button
+              className="btnPlaintext secondary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                }
+              }
+            >
+              ☐
+            </button>
+          </Button>
+        </div>
+        <div
+          className="name"
+        >
+          <Loading
+            el="span"
+            lines={1}
+            width="100%"
+          >
+            <span
+              key="0"
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <span
+                className="loadingText light"
+              />
+            </span>
+          </Loading>
+        </div>
+        <div
+          className="category"
+        >
+          <Loading
+            el="span"
+            lines={1}
+            width="100%"
+          >
+            <span
+              key="0"
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <span
+                className="loadingText light"
+              />
+            </span>
+          </Loading>
+        </div>
+        <div
+          className="quantity"
+        >
+          <Loading
+            el="span"
+            lines={1}
+            width="100%"
+          >
+            <span
+              key="0"
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <span
+                className="loadingText light"
+              />
+            </span>
+          </Loading>
+        </div>
+      </div>
+    </ListItem>
+    <ListItem
+      item={null}
+      key="3"
+      onClick={[Function]}
+    >
+      <div
+        className="listItem active light"
+      >
+        <div
+          className="checkbox"
+        >
+          <Button
+            plaintext={true}
+            styles={
+              Object {
+                "outline": "none",
+              }
+            }
+          >
+            <button
+              className="btnPlaintext secondary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "outline": "none",
+                }
+              }
+            >
+              ☐
+            </button>
+          </Button>
+        </div>
+        <div
+          className="name"
+        >
+          <Loading
+            el="span"
+            lines={1}
+            width="100%"
+          >
+            <span
+              key="0"
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <span
+                className="loadingText light"
+              />
+            </span>
+          </Loading>
+        </div>
+        <div
+          className="category"
+        >
+          <Loading
+            el="span"
+            lines={1}
+            width="100%"
+          >
+            <span
+              key="0"
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <span
+                className="loadingText light"
+              />
+            </span>
+          </Loading>
+        </div>
+        <div
+          className="quantity"
+        >
+          <Loading
+            el="span"
+            lines={1}
+            width="100%"
+          >
+            <span
+              key="0"
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <span
+                className="loadingText light"
+              />
+            </span>
+          </Loading>
+        </div>
+      </div>
+    </ListItem>
+  </Await>
+</ListDetails>
+`;
+
+exports[`ListDetails throws an E404 error if the list is not found 1`] = `
+<ErrorBoundary>
+  <ErrorMessage>
+    <div
+      className="errorMessage light"
+    >
+      ⚠ Not found
+    </div>
+  </ErrorMessage>
+</ErrorBoundary>
+`;

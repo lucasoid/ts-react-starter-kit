@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoundary displays a 500 error if the error is of type E500 or anything else 1`] = `
+<ErrorBoundary>
+  <ErrorMessage>
+    <div
+      className="errorMessage light"
+    >
+      ⚠ Something went wrong
+    </div>
+  </ErrorMessage>
+</ErrorBoundary>
+`;
+
+exports[`ErrorBoundary displays a 500 error if the error is of type E500 or anything else 2`] = `
+<ErrorBoundary>
+  <ErrorMessage>
+    <div
+      className="errorMessage light"
+    >
+      ⚠ Something went wrong
+    </div>
+  </ErrorMessage>
+</ErrorBoundary>
+`;
+
+exports[`ErrorBoundary displays a Not Found error if the error is of type E404 1`] = `
+<ErrorBoundary>
+  <ErrorMessage>
+    <div
+      className="errorMessage light"
+    >
+      ⚠ Not found
+    </div>
+  </ErrorMessage>
+</ErrorBoundary>
+`;
+
+exports[`ErrorBoundary renders the child tree if no errors are caught 1`] = `
+<ErrorBoundary>
+  <Child>
+    <div>
+      OK
+    </div>
+  </Child>
+</ErrorBoundary>
+`;

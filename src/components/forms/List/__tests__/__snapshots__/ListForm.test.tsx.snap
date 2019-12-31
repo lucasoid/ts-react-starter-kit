@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListForm renders a form for creating a list 1`] = `
+<Form
+  cancelText="Cancel"
+  onCancel={[MockFunction]}
+  onSubmit={[Function]}
+  submitText="Create"
+>
+  <TextField
+    label="List name"
+    onChange={[MockFunction]}
+    value="value"
+  />
+  <TextField
+    disabled={true}
+    label="List owner"
+    onChange={[MockFunction]}
+    value="me@domain.com"
+  />
+  <TextField
+    label="Share with"
+    onChange={[MockFunction]}
+    value="value"
+  />
+</Form>
+`;

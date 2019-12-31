@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage displays a themed error message 1`] = `
+<div
+  className="errorMessage light"
+>
+  Oops
+</div>
+`;
+
+exports[`ErrorMessage displays a themed error message 2`] = `
+<div
+  className="errorMessage dark"
+>
+  Oops
+</div>
+`;

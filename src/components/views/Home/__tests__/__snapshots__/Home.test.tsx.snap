@@ -1,0 +1,353 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home allows for opening and closing the create dialog 1`] = `
+<Fragment>
+  <View>
+    <h2>
+      My lists
+    </h2>
+    <Await
+      loaded={true}
+      renderFallback={[Function]}
+    >
+      <List
+        key="1"
+        list={
+          Object {
+            "id": "1",
+            "members": Array [],
+            "name": "My List",
+            "owner": "me@domain.com",
+          }
+        }
+      />
+      <List
+        key="2"
+        list={
+          Object {
+            "id": "2",
+            "members": Array [
+              "you@domain.com",
+            ],
+            "name": "My other list",
+            "owner": "me@domain.com",
+          }
+        }
+      />
+      <Button
+        onClick={[Function]}
+        styles={
+          Object {
+            "marginTop": "1em",
+          }
+        }
+        type={0}
+      >
+        + New list
+      </Button>
+    </Await>
+  </View>
+  <Modal
+    onDismiss={[Function]}
+    width={1}
+  >
+    <ListForm
+      onCancel={[Function]}
+      onSubmit={[Function]}
+    />
+  </Modal>
+</Fragment>
+`;
+
+exports[`Home allows for opening and closing the create dialog 2`] = `
+<Fragment>
+  <View>
+    <h2>
+      My lists
+    </h2>
+    <Await
+      loaded={true}
+      renderFallback={[Function]}
+    >
+      <List
+        key="1"
+        list={
+          Object {
+            "id": "1",
+            "members": Array [],
+            "name": "My List",
+            "owner": "me@domain.com",
+          }
+        }
+      />
+      <List
+        key="2"
+        list={
+          Object {
+            "id": "2",
+            "members": Array [
+              "you@domain.com",
+            ],
+            "name": "My other list",
+            "owner": "me@domain.com",
+          }
+        }
+      />
+      <Button
+        onClick={[Function]}
+        styles={
+          Object {
+            "marginTop": "1em",
+          }
+        }
+        type={0}
+      >
+        + New list
+      </Button>
+    </Await>
+  </View>
+</Fragment>
+`;
+
+exports[`Home provides for creating a new list 1`] = `
+<Fragment>
+  <View>
+    <h2>
+      My lists
+    </h2>
+    <Await
+      loaded={true}
+      renderFallback={[Function]}
+    >
+      <List
+        key="3"
+        list={
+          Object {
+            "id": "3",
+            "members": Array [],
+            "name": "My new list",
+            "owner": "me@domain.com",
+          }
+        }
+      />
+      <Button
+        onClick={[Function]}
+        styles={
+          Object {
+            "marginTop": "1em",
+          }
+        }
+        type={0}
+      >
+        + New list
+      </Button>
+    </Await>
+  </View>
+</Fragment>
+`;
+
+exports[`Home renders a list of lists 1`] = `
+<Fragment>
+  <View>
+    <h2>
+      My lists
+    </h2>
+    <Await
+      loaded={true}
+      renderFallback={[Function]}
+    >
+      <List
+        key="1"
+        list={
+          Object {
+            "id": "1",
+            "members": Array [],
+            "name": "My List",
+            "owner": "me@domain.com",
+          }
+        }
+      />
+      <List
+        key="2"
+        list={
+          Object {
+            "id": "2",
+            "members": Array [
+              "you@domain.com",
+            ],
+            "name": "My other list",
+            "owner": "me@domain.com",
+          }
+        }
+      />
+      <Button
+        onClick={[Function]}
+        styles={
+          Object {
+            "marginTop": "1em",
+          }
+        }
+        type={0}
+      >
+        + New list
+      </Button>
+    </Await>
+  </View>
+</Fragment>
+`;
+
+exports[`Home renders a loading UI 1`] = `
+<Home>
+  <View>
+    <div
+      className="view light"
+    >
+      <ErrorBoundary>
+        <h2>
+          My lists
+        </h2>
+        <Await
+          loaded={false}
+          renderFallback={[Function]}
+        >
+          <List
+            key="1"
+            list={null}
+          >
+            <div
+              className="menuItem light"
+            >
+              <Loading
+                el="a"
+                lines={1}
+                width="35%"
+              >
+                <a
+                  key="0"
+                  style={
+                    Object {
+                      "width": "35%",
+                    }
+                  }
+                >
+                  <span
+                    className="loadingText light"
+                  />
+                </a>
+              </Loading>
+              <Loading
+                el="aside"
+                lines={1}
+                width="25%"
+              >
+                <aside
+                  key="0"
+                  style={
+                    Object {
+                      "width": "25%",
+                    }
+                  }
+                >
+                  <span
+                    className="loadingText light"
+                  />
+                </aside>
+              </Loading>
+            </div>
+          </List>
+          <List
+            key="2"
+            list={null}
+          >
+            <div
+              className="menuItem light"
+            >
+              <Loading
+                el="a"
+                lines={1}
+                width="35%"
+              >
+                <a
+                  key="0"
+                  style={
+                    Object {
+                      "width": "35%",
+                    }
+                  }
+                >
+                  <span
+                    className="loadingText light"
+                  />
+                </a>
+              </Loading>
+              <Loading
+                el="aside"
+                lines={1}
+                width="25%"
+              >
+                <aside
+                  key="0"
+                  style={
+                    Object {
+                      "width": "25%",
+                    }
+                  }
+                >
+                  <span
+                    className="loadingText light"
+                  />
+                </aside>
+              </Loading>
+            </div>
+          </List>
+          <List
+            key="3"
+            list={null}
+          >
+            <div
+              className="menuItem light"
+            >
+              <Loading
+                el="a"
+                lines={1}
+                width="35%"
+              >
+                <a
+                  key="0"
+                  style={
+                    Object {
+                      "width": "35%",
+                    }
+                  }
+                >
+                  <span
+                    className="loadingText light"
+                  />
+                </a>
+              </Loading>
+              <Loading
+                el="aside"
+                lines={1}
+                width="25%"
+              >
+                <aside
+                  key="0"
+                  style={
+                    Object {
+                      "width": "25%",
+                    }
+                  }
+                >
+                  <span
+                    className="loadingText light"
+                  />
+                </aside>
+              </Loading>
+            </div>
+          </List>
+        </Await>
+      </ErrorBoundary>
+    </div>
+  </View>
+</Home>
+`;

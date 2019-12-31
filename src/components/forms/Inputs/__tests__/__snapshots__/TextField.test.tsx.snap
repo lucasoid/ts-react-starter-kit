@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField renders a disabled text input 1`] = `
+<div
+  className="ctrl"
+>
+  <label>
+    My test field
+  </label>
+  <input
+    disabled={true}
+    onChange={[Function]}
+    type="text"
+    value="ABC"
+  />
+</div>
+`;
+
+exports[`TextField renders a styled text input 1`] = `
+<div
+  className="ctrl"
+>
+  <label>
+    My test field
+  </label>
+  <input
+    onChange={[Function]}
+    type="text"
+    value="ABC"
+  />
+</div>
+`;

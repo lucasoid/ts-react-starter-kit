@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 export interface IList {
     id: string;
     name: string;

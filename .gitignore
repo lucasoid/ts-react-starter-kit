@@ -1,4 +1,5 @@
 .cache
 .notes
+.reports
 dist
 node_modules

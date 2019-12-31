@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem displays a themed ListItem entry 1`] = `
+<div
+  className="
+                listItem
+                active
+                light
+            "
+  onClick={[Function]}
+>
+  <div
+    className="checkbox"
+  >
+    <Button
+      plaintext={true}
+      styles={
+        Object {
+          "outline": "none",
+        }
+      }
+    >
+      ☐
+    </Button>
+  </div>
+  <div
+    className="name"
+  >
+    My cool item
+  </div>
+  <div
+    className="category"
+  >
+    hardware
+  </div>
+  <div
+    className="quantity"
+  >
+    99
+  </div>
+</div>
+`;
+
+exports[`ListItem displays a themed ListItem entry 2`] = `
+<div
+  className="
+                listItem
+                active
+                dark
+            "
+  onClick={[Function]}
+>
+  <div
+    className="checkbox"
+  >
+    <Button
+      plaintext={true}
+      styles={
+        Object {
+          "outline": "none",
+        }
+      }
+    >
+      ☐
+    </Button>
+  </div>
+  <div
+    className="name"
+  >
+    My cool item
+  </div>
+  <div
+    className="category"
+  >
+    hardware
+  </div>
+  <div
+    className="quantity"
+  >
+    99
+  </div>
+</div>
+`;
+
+exports[`ListItem displays a themed loading UI if no list item data is provided 1`] = `
+<div
+  className="listItem active light"
+>
+  <div
+    className="checkbox"
+  >
+    <Button
+      plaintext={true}
+      styles={
+        Object {
+          "outline": "none",
+        }
+      }
+    >
+      ☐
+    </Button>
+  </div>
+  <div
+    className="name"
+  >
+    <Loading
+      el="span"
+      lines={1}
+      width="100%"
+    />
+  </div>
+  <div
+    className="category"
+  >
+    <Loading
+      el="span"
+      lines={1}
+      width="100%"
+    />
+  </div>
+  <div
+    className="quantity"
+  >
+    <Loading
+      el="span"
+      lines={1}
+      width="100%"
+    />
+  </div>
+</div>
+`;
+
+exports[`ListItem displays a themed loading UI if no list item data is provided 2`] = `
+<div
+  className="listItem active dark"
+>
+  <div
+    className="checkbox"
+  >
+    <Button
+      plaintext={true}
+      styles={
+        Object {
+          "outline": "none",
+        }
+      }
+    >
+      ☐
+    </Button>
+  </div>
+  <div
+    className="name"
+  >
+    <Loading
+      el="span"
+      lines={1}
+      width="100%"
+    />
+  </div>
+  <div
+    className="category"
+  >
+    <Loading
+      el="span"
+      lines={1}
+      width="100%"
+    />
+  </div>
+  <div
+    className="quantity"
+  >
+    <Loading
+      el="span"
+      lines={1}
+      width="100%"
+    />
+  </div>
+</div>
+`;
+
+exports[`ListItem styles an inactive item 1`] = `
+<div
+  className="
+                listItem
+                inactive
+                light
+            "
+  onClick={[Function]}
+>
+  <div
+    className="checkbox"
+  >
+    <Button
+      plaintext={true}
+      styles={
+        Object {
+          "outline": "none",
+        }
+      }
+    >
+      ☑
+    </Button>
+  </div>
+  <div
+    className="name"
+  >
+    My cool item
+  </div>
+  <div
+    className="category"
+  >
+    hardware
+  </div>
+  <div
+    className="quantity"
+  >
+    99
+  </div>
+</div>
+`;

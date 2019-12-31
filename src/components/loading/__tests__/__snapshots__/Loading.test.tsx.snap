@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading displays a themed placeholder UI 1`] = `
+<Fragment>
+  <p
+    key="0"
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  >
+    <span
+      className="loadingText light"
+    />
+  </p>
+  <p
+    key="1"
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  >
+    <span
+      className="loadingText light"
+    />
+  </p>
+  <p
+    key="2"
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  >
+    <span
+      className="loadingText light"
+    />
+  </p>
+</Fragment>
+`;
+
+exports[`Loading displays a themed placeholder UI 2`] = `
+<Fragment>
+  <h1
+    key="0"
+    style={
+      Object {
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="loadingText dark"
+    />
+  </h1>
+</Fragment>
+`;

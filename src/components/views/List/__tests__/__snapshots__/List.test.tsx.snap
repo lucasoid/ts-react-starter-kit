@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem renders a view of a list page 1`] = `
+<View>
+  <Link
+    to="/"
+  >
+    ← All lists
+  </Link>
+  <ListDetails
+    listId="1"
+  />
+</View>
+`;

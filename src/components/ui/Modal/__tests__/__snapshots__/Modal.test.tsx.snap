@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders a modal dialog in various widths 1`] = `
+<Portal
+  containerInfo={<div />}
+>
+  <div
+    className="modalWrap light"
+  >
+    <div
+      className="modalDialog small"
+      role="dialog"
+    >
+      <div
+        className="close"
+      >
+        <Button
+          onClick={[MockFunction]}
+          plaintext={true}
+          title="Close"
+        >
+          ✕
+        </Button>
+      </div>
+      Some content
+    </div>
+  </div>
+</Portal>
+`;
+
+exports[`Modal renders a modal dialog in various widths 2`] = `
+<Portal
+  containerInfo={<div />}
+>
+  <div
+    className="modalWrap light"
+  >
+    <div
+      className="modalDialog medium"
+      role="dialog"
+    >
+      <div
+        className="close"
+      >
+        <Button
+          onClick={[MockFunction]}
+          plaintext={true}
+          title="Close"
+        >
+          ✕
+        </Button>
+      </div>
+      Some content
+    </div>
+  </div>
+</Portal>
+`;
+
+exports[`Modal renders a modal dialog in various widths 3`] = `
+<Portal
+  containerInfo={<div />}
+>
+  <div
+    className="modalWrap light"
+  >
+    <div
+      className="modalDialog large"
+      role="dialog"
+    >
+      <div
+        className="close"
+      >
+        <Button
+          onClick={[MockFunction]}
+          plaintext={true}
+          title="Close"
+        >
+          ✕
+        </Button>
+      </div>
+      Some content
+    </div>
+  </div>
+</Portal>
+`;
+
+exports[`Modal renders a themed modal 1`] = `
+<Portal
+  containerInfo={<div />}
+>
+  <div
+    className="modalWrap light"
+  >
+    <div
+      className="modalDialog medium"
+      role="dialog"
+    >
+      <div
+        className="close"
+      >
+        <Button
+          onClick={[MockFunction]}
+          plaintext={true}
+          title="Close"
+        >
+          ✕
+        </Button>
+      </div>
+      Some content
+    </div>
+  </div>
+</Portal>
+`;
+
+exports[`Modal renders a themed modal 2`] = `
+<Portal
+  containerInfo={<div />}
+>
+  <div
+    className="modalWrap dark"
+  >
+    <div
+      className="modalDialog medium"
+      role="dialog"
+    >
+      <div
+        className="close"
+      >
+        <Button
+          onClick={[MockFunction]}
+          plaintext={true}
+          title="Close"
+        >
+          ✕
+        </Button>
+      </div>
+      Some content
+    </div>
+  </div>
+</Portal>
+`;

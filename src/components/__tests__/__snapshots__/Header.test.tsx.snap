@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header displays a themed header 1`] = `
+<Fragment>
+  <header
+    className="header light"
+  >
+    <h1
+      className="title"
+    >
+      Welcome
+    </h1>
+  </header>
+  <ErrorBoundary>
+    <MainMenu />
+  </ErrorBoundary>
+</Fragment>
+`;
+
+exports[`Header displays a themed header 2`] = `
+<Fragment>
+  <header
+    className="header dark"
+  >
+    <h1
+      className="title"
+    >
+      Welcome
+    </h1>
+  </header>
+  <ErrorBoundary>
+    <MainMenu />
+  </ErrorBoundary>
+</Fragment>
+`;

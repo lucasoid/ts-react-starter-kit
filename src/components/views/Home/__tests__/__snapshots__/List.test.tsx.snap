@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List displays a themed List item 1`] = `
+<div
+  className="menuItem light"
+>
+  <Link
+    title="My cool list"
+    to="/lists/1"
+  >
+    My cool list
+  </Link>
+  <aside>
+    Created by 
+    me@domain.com
+  </aside>
+</div>
+`;
+
+exports[`List displays a themed List item 2`] = `
+<div
+  className="menuItem dark"
+>
+  <Link
+    title="My cool list"
+    to="/lists/1"
+  >
+    My cool list
+  </Link>
+  <aside>
+    Created by 
+    me@domain.com
+  </aside>
+</div>
+`;

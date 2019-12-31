@@ -7,12 +7,11 @@ export enum Themes {
 
 interface IThemeContext {
     theme: string;
-    selectTheme: Function;
+    selectTheme?: Function;
 }
 
 export const ThemeContext = React.createContext<IThemeContext>({
     theme: Themes.LIGHT,
-    selectTheme: () => {},
 });
 
 interface IThemeState {

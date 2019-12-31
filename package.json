@@ -4,7 +4,7 @@
     "repository": "https://github.com/lucasoid/ts-react-starter-kit",
     "description": "Demo of React 16 and TypeScript",
     "scripts": {
-        "test": "test",
+        "test": "jest",
         "serve": "parcel src/index.html",
         "build": "parcel build src/index.ts"
     },
@@ -17,13 +17,25 @@
         "uuid": "^3.3.3"
     },
     "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.7.4",
+        "@babel/preset-env": "^7.7.7",
+        "@babel/preset-react": "^7.7.4",
+        "@babel/preset-typescript": "^7.7.7",
+        "@types/jest": "^24.0.25",
         "@types/react": "^16.9.17",
         "@types/react-dom": "^16.9.4",
+        "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.2",
+        "enzyme-to-json": "^3.4.3",
         "husky": "^3.1.0",
+        "identity-obj-proxy": "^3.0.0",
+        "jest": "^24.9.0",
+        "jest-junit": "^10.0.0",
         "parcel": "^1.12.4",
         "postcss-modules": "^1.4.1",
         "prettier": "^1.19.1",
         "pretty-quick": "^2.0.1",
+        "regenerator-runtime": "^0.13.3",
         "typescript": "^3.7.3"
     }
 }

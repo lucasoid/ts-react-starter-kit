@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainMenu displays a themed main menu UI 1`] = `
+<ul
+  className="mainMenu light"
+>
+  <MainMenuItem>
+    <NavLink
+      activeClassName="active"
+      exact={true}
+      to="/"
+    >
+      Home
+    </NavLink>
+  </MainMenuItem>
+  <MainMenuItem>
+    <NavLink
+      activeClassName="active"
+      exact={true}
+      to="/settings"
+    >
+      Settings
+    </NavLink>
+  </MainMenuItem>
+  <MainMenuItem>
+    <NavLink
+      activeClassName="active"
+      exact={true}
+      to="/About"
+    >
+      About
+    </NavLink>
+  </MainMenuItem>
+</ul>
+`;
+
+exports[`MainMenu displays a themed main menu UI 2`] = `
+<ul
+  className="mainMenu dark"
+>
+  <MainMenuItem>
+    <NavLink
+      activeClassName="active"
+      exact={true}
+      to="/"
+    >
+      Home
+    </NavLink>
+  </MainMenuItem>
+  <MainMenuItem>
+    <NavLink
+      activeClassName="active"
+      exact={true}
+      to="/settings"
+    >
+      Settings
+    </NavLink>
+  </MainMenuItem>
+  <MainMenuItem>
+    <NavLink
+      activeClassName="active"
+      exact={true}
+      to="/About"
+    >
+      About
+    </NavLink>
+  </MainMenuItem>
+</ul>
+`;

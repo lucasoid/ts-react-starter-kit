@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form renders a form element conditionally with save and cancel buttons 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  Form content here
+  <div
+    className="btnGroup"
+  />
+</form>
+`;
+
+exports[`Form renders a form element conditionally with save and cancel buttons 2`] = `
+<form
+  onSubmit={[Function]}
+>
+  Form content here
+  <div
+    className="btnGroup"
+  >
+    <Button
+      onClick={[MockFunction]}
+      type={1}
+    />
+    <Button
+      onClick={[MockFunction]}
+      type={0}
+    />
+  </div>
+</form>
+`;
+
+exports[`Form renders customized button text 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  Form content here
+  <div
+    className="btnGroup"
+  >
+    <Button
+      onClick={[MockFunction]}
+      type={1}
+    >
+      My custom cancel text
+    </Button>
+    <Button
+      onClick={[MockFunction]}
+      type={0}
+    >
+      My custom submit text
+    </Button>
+  </div>
+</form>
+`;

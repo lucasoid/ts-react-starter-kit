@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Settings allows for selecting a theme 1`] = `
+<Theme>
+  <Settings>
+    <View>
+      <div
+        className="view dark"
+      >
+        <ErrorBoundary>
+          <h2>
+            Settings
+          </h2>
+          <h3>
+            Theme
+          </h3>
+          <p
+            key="DARK"
+          >
+            <Button
+              onClick={[Function]}
+              plaintext={true}
+              styles={
+                Object {
+                  "marginRight": "1em",
+                }
+              }
+            >
+              <button
+                className="btnPlaintext secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginRight": "1em",
+                  }
+                }
+              >
+                ☑
+              </button>
+            </Button>
+            dark
+          </p>
+          <p
+            key="LIGHT"
+          >
+            <Button
+              onClick={[Function]}
+              plaintext={true}
+              styles={
+                Object {
+                  "marginRight": "1em",
+                }
+              }
+            >
+              <button
+                className="btnPlaintext secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginRight": "1em",
+                  }
+                }
+              >
+                ☐
+              </button>
+            </Button>
+            light
+          </p>
+        </ErrorBoundary>
+      </div>
+    </View>
+  </Settings>
+</Theme>
+`;
+
+exports[`Settings allows for selecting a theme 2`] = `
+<Theme>
+  <Settings>
+    <View>
+      <div
+        className="view light"
+      >
+        <ErrorBoundary>
+          <h2>
+            Settings
+          </h2>
+          <h3>
+            Theme
+          </h3>
+          <p
+            key="DARK"
+          >
+            <Button
+              onClick={[Function]}
+              plaintext={true}
+              styles={
+                Object {
+                  "marginRight": "1em",
+                }
+              }
+            >
+              <button
+                className="btnPlaintext secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginRight": "1em",
+                  }
+                }
+              >
+                ☐
+              </button>
+            </Button>
+            dark
+          </p>
+          <p
+            key="LIGHT"
+          >
+            <Button
+              onClick={[Function]}
+              plaintext={true}
+              styles={
+                Object {
+                  "marginRight": "1em",
+                }
+              }
+            >
+              <button
+                className="btnPlaintext secondary"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginRight": "1em",
+                  }
+                }
+              >
+                ☑
+              </button>
+            </Button>
+            light
+          </p>
+        </ErrorBoundary>
+      </div>
+    </View>
+  </Settings>
+</Theme>
+`;
+
+exports[`Settings displays a settings page 1`] = `<Settings />`;

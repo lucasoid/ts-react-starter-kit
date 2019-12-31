@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button accepts additional styles 1`] = `
+<button
+  className="btn secondary"
+  onClick={[Function]}
+  style={
+    Object {
+      "marginTop": "22px",
+    }
+  }
+>
+  Click here
+</button>
+`;
+
+exports[`Button renders a plaintext button 1`] = `
+<button
+  className="btnPlaintext secondary"
+  onClick={[Function]}
+  style={Object {}}
+>
+  Click here
+</button>
+`;
+
+exports[`Button renders a primary button 1`] = `
+<button
+  className="btn secondary"
+  onClick={[Function]}
+  style={Object {}}
+>
+  Click here
+</button>
+`;
+
+exports[`Button renders a secondary button 1`] = `
+<button
+  className="btn secondary"
+  onClick={[Function]}
+  style={Object {}}
+>
+  Click here
+</button>
+`;
+
+exports[`Button renders the title attribute 1`] = `
+<button
+  className="btn secondary"
+  onClick={[Function]}
+  style={Object {}}
+  title="Alt text here"
+>
+  Click here
+</button>
+`;
